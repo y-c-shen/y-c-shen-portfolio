@@ -10,7 +10,6 @@ import ExperienceContainer from "@/components/ExperienceContainer";
 import ProjectsContainer from "@/components/ProjectsContainer";
 
 export default function Home() {
-  const [activeSection, setActiveSection] = useState("about");
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
 
   // Hide scroll indicator after scrolling
@@ -27,14 +26,6 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Scroll to section smoothly
-  const scrollToSection = (sectionId: any) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      setActiveSection(sectionId);
-    }
-  };
 
   return (
     <div className="flex flex-col items-center min-h-screen font-[family-name:var(--font-geist-sans)] bg-neutral-900 text-white">

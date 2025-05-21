@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { BriefcaseIcon, CalendarIcon } from "lucide-react";
+import { CalendarIcon } from "lucide-react";
 
 const ExperienceContainer = () => {
   const containerVariants = {
@@ -90,7 +90,7 @@ const ExperienceContainer = () => {
               </div>
               
               <p className="text-neutral-300 leading-relaxed">
-                Built and implemented a full-stack mobile application in Power Apps for the unit's Supply Department, streamlining equipment requests and appointment services for over 325+ Naval Reservists.
+                Built and implemented a full-stack mobile application in Power Apps for the unit&apos;s Supply Department, streamlining equipment requests and appointment services for over 325+ Naval Reservists.
               </p>
               
               <div className="mt-4 flex flex-wrap gap-2">

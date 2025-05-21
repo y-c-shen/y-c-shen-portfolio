@@ -40,11 +40,11 @@ const AboutContainer = () => {
           className="text-base text-neutral-300 space-y-4 leading-relaxed"
         >
           <p>
-            Hey, I'm Yejia, a U2 co-op student at McGill studying Software Engineering. I'm always on the lookout to learn something new, whether it's diving deeper into machine learning and RAG pipelines or sharpening my full-stack development skills.
+            Hey, I&apos;m Yejia, a U2 co-op student at McGill studying Software Engineering. I&apos;m always on the lookout to learn something new, whether it&apos;s diving deeper into machine learning and RAG pipelines or sharpening my full-stack development skills.
           </p>
           
           <p>
-            When I'm not coding, you can find me on the basketball court (go Mavs), planning my next travel adventure, or immersed in a good video game. Recent favorites are Elden Ring and Sekiro.
+            When I&apos;m not coding, you can find me on the basketball court (go Mavs), planning my next travel adventure, or immersed in a good video game. Recent favorites are Elden Ring and Sekiro.
           </p>
         </motion.div>
         

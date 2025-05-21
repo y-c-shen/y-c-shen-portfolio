@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Calendar, Youtube } from "lucide-react";
+import { Calendar} from "lucide-react";
 import { FC } from 'react';
 
 interface Props {
@@ -9,10 +9,9 @@ interface Props {
     description: string;
     tags: string[];
     demoLink: string;
-    githubLink: string;
 }
 
-const ProjectCard: FC<Props> = ({ title, date, description, tags, demoLink, githubLink }) => {
+const ProjectCard: FC<Props> = ({ title, date, description, tags, demoLink }) => {
   return (
     <motion.div 
       whileHover={{ y: -5 }}
@@ -110,7 +109,7 @@ const ProjectsContainer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <ProjectCard githubLink={''} {...project} />
+              <ProjectCard {...project} />
             </motion.div>
           ))}
           
