@@ -61,7 +61,7 @@ const ExperienceContainer = () => {
               </p>
               
               <div className="mt-4 flex flex-wrap gap-2">
-                {["RAG", "API Development", "Cloud Services", "Data Processing"].map(tag => (
+                {["RAG", "API Development", "AWS Services", "Data Processing"].map(tag => (
                   <span key={tag} className="px-2 py-0.5 bg-neutral-700/40 text-neutral-300 text-xs rounded">
                     {tag}
                   </span>
@@ -94,7 +94,7 @@ const ExperienceContainer = () => {
               </p>
               
               <div className="mt-4 flex flex-wrap gap-2">
-                {["Full-stack Development", "Power Apps", "Mobile Development", "Process Optimization"].map(tag => (
+                {["Power Apps", "UI/UX"].map(tag => (
                   <span key={tag} className="px-2 py-0.5 bg-neutral-700/40 text-neutral-300 text-xs rounded">
                     {tag}
                   </span>

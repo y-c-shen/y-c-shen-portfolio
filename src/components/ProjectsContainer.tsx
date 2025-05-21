@@ -71,21 +71,21 @@ const ProjectsContainer = () => {
       title: "SummariX: A RAG-based finance assistant",
       date: "Nov 2024",
       description: "Full-stack application enabling financial analysts to analyze and interact with PDF documents through Q&A. Integrated Claude 3.0 LLM through AWS Bedrock for language processing and implemented a user-friendly frontend using Streamlit.",
-      tags: ["RAG", "Claude 3.0", "AWS Bedrock", "Streamlit", "PDF Processing"],
+      tags: ["RAG", "Claude 3.0", "AWS Bedrock", "Streamlit"],
       demoLink: "https://youtu.be/snLFg6mMCIA"
     },
     {
       title: "SimplyMail: Gmail summarizer extension",
       date: "Feb 2025",
       description: "Chrome extension that summarizes emails on-page and flags malicious links in real-time.",
-      tags: ["Chrome Extension", "Email Processing", "Security", "JavaScript"],
+      tags: ["Chrome Extension", "JavaScript", "Flask", "Ollama"],
       demoLink: "https://www.youtube.com/watch?v=zoDTABnNOWM&ab_channel=YejiaCharlesShen"
     },
     {
       title: "Chess Oven: Chess, from scratch.",
       date: "June 2024",
       description: "Fully featured chess game built in native javascript with piece logic, clock, castling, promotion, and checkmate.",
-      tags: ["JavaScript", "Game Development", "UI/UX", "Frontend"],
+      tags: ["JavaScript", "UI/UX", "Frontend"],
       demoLink: "https://jstephenhuang.github.io/chess-oven/"
     }
   ];
