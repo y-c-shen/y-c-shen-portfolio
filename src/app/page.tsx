@@ -28,9 +28,11 @@ export default function Home() {
 
 
   return (
-    <div className="flex flex-col items-center min-h-screen font-[family-name:var(--font-geist-sans)] bg-gradient-to-br from-slate-800 via-neutral-900 to-slate-900 text-white relative">
+    <div className="flex flex-col items-center min-h-screen font-[family-name:var(--font-geist-sans)] text-white relative">
+      {/* Fixed gradient background that covers entire viewport */}
+      <div className="fixed inset-0 bg-gradient-to-br from-slate-800 via-neutral-900 to-slate-900 -z-10" />
       {/* Enhanced overlay gradient for smoother blending */}
-      <div className="absolute inset-0 bg-gradient-to-b from-neutral-800/20 via-transparent to-neutral-900/40 pointer-events-none" />
+      <div className="fixed inset-0 bg-gradient-to-b from-slate-800/20 via-transparent to-neutral-900/40 pointer-events-none -z-10" />
       
       {/* Hero section */}
       <motion.div 
