@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { DownloadIcon, Mail } from "lucide-react";
 
 interface Buttons {
-  children: ReactNode;
+  children: ReactNode; // the button's text
   variant: "primary" | "secondary";
   href?: string;
   onClick?: () => void;
@@ -11,7 +11,7 @@ interface Buttons {
   icon?: ReactNode;
 }
 
-const CustomButton: FC<Buttons> = ({ children, variant, href, onClick, download, icon }) => {
+const CustomButton = ({ children, variant, href, onClick, download, icon }: Buttons) => { // functional react component that builds a button
   const baseClasses ="flex items-center justify-center py-2 px-6 rounded-full font-medium duration-300 text-sm cursor-pointer";
   const variantClasses = {
     primary:

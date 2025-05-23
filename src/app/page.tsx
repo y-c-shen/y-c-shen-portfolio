@@ -12,7 +12,7 @@ import ProjectsContainer from "@/components/ProjectsContainer";
 export default function Home() {
   const [showScrollIndicator, setShowScrollIndicator] = useState(true);
 
-  // Hide scroll indicator after scrolling
+  // Hide scroll indicator after scrolling 100 pixels
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 100) {
@@ -23,21 +23,21 @@ export default function Home() {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    return () => window.removeEventListener("scroll", handleScroll);  // cleanup when dismounted
+  }, []); // empty dependency, so only runs on mount
 
 
   return (
-    <div className="flex flex-col items-center min-h-screen font-[family-name:var(--font-geist-sans)] bg-neutral-900 text-white">
-      {/* Fixed navigation */}
-
-
+    <div className="flex flex-col items-center min-h-screen font-[family-name:var(--font-geist-sans)] bg-gradient-to-br from-slate-800 via-neutral-900 to-slate-900 text-white relative">
+      {/* Enhanced overlay gradient for smoother blending */}
+      <div className="absolute inset-0 bg-gradient-to-b from-neutral-800/20 via-transparent to-neutral-900/40 pointer-events-none" />
+      
       {/* Hero section */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="flex flex-col items-center justify-center min-h-screen w-full px-4 pt-16"
+        className="flex flex-col items-center justify-center min-h-screen w-full px-4 pt-16 relative z-10"
       >
         <div className="flex flex-col items-center text-center max-w-xl">
           <div className="flex items-center space-x-2 mb-6 text-neutral-400">
@@ -88,7 +88,7 @@ export default function Home() {
       </motion.div>
 
       {/* Content sections with intersection observer */}
-      <div className="w-full max-w-3xl px-6">
+      <div className="w-full max-w-3xl px-6 relative z-10">
         <section id="about" className="py-24">
           <AboutContainer />
         </section>
@@ -103,7 +103,7 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <footer className="w-full py-10 border-t border-neutral-800 mt-20">
+      <footer className="w-full py-10 border-t border-neutral-800 mt-20 relative z-10">
         <div className="max-w-5xl mx-auto px-6 text-center text-neutral-400 text-sm">
           <p>© {new Date().getFullYear()} Yejia Shen. Built with Next.js and Tailwind CSS.</p>
         </div>

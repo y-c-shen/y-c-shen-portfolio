@@ -11,7 +11,7 @@ interface Props {
     demoLink: string;
 }
 
-const ProjectCard: FC<Props> = ({ title, date, description, tags, demoLink }) => {
+const ProjectCard = ({ title, date, description, tags, demoLink }: Props) => {
   return (
     <motion.div 
       whileHover={{ y: -5 }}

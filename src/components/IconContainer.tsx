@@ -9,7 +9,7 @@ interface SocialIconProps {
   color?: string;
 }
 
-const SocialIcon = ({ href, icon, label, color }: SocialIconProps) => {
+const SocialIcon = ({ href, icon, label, color }: SocialIconProps) => {  // below, we define a list of icons, and each will map to this function, returning a icon div
   return (
     <motion.a
       href={href}
@@ -24,7 +24,7 @@ const SocialIcon = ({ href, icon, label, color }: SocialIconProps) => {
       <div
         className={`relative flex items-center justify-center w-12 h-12 rounded-full border border-neutral-700 bg-neutral-800/60 backdrop-blur-sm ${color} transition-all duration-300`}
       >
-        {React.cloneElement(icon)}
+        {icon} {/* React.cloneElement(icon, {className: "text-neutral-300" })  if we want to override the props*/}
       </div>
       <span className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 px-2 py-1 bg-neutral-800 text-neutral-300 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
         {label}
@@ -34,7 +34,7 @@ const SocialIcon = ({ href, icon, label, color }: SocialIconProps) => {
 };
 
 export default function IconContainer() {
-  const socials = [
+  const socials = [ // defining the icons we want
     {
       href: "https://github.com/y-c-shen",
       icon: <Github className="w-5 h-5" />,

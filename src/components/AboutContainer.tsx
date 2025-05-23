@@ -9,7 +9,7 @@ const AboutContainer = () => {
       y: 0,
       transition: { 
         duration: 0.6,
-        staggerChildren: 0.2
+        staggerChildren: 0.2 // animates children one after the other
       }
     }
   };
@@ -22,14 +22,15 @@ const AboutContainer = () => {
   return (
     <motion.div 
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={containerVariants}
+      whileInView="visible" // when scrolled into view, apply containerVariants.visible
+      viewport={{ once: true, margin: "-100px" }} // Triggers the animation only once when the container enters the viewport, even partially (100px earlier than default)
+      variants={containerVariants} // Links this motion div to the containerVariants config
       className="flex justify-center w-full"
     >
       <div className="flex flex-col w-full">
         <motion.h2 
-          variants={itemVariants}
+          variants={itemVariants} // Links this motion div to the itemVariants config
+          // initial="hidden" and whileInView="visible" are inherited from parent div
           className="text-2xl font-bold mb-8 text-center sm:text-left relative after:content-[''] after:absolute after:left-0 after:-bottom-2 after:w-16 after:h-1 after:bg-yellow-400 sm:after:mx-0 after:mx-auto"
         >
           About Me
