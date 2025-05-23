@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import { Calendar} from "lucide-react";
-import { FC } from 'react';
 
 interface Props {
     title: string;
